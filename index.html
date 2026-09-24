@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FAF8F3">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karo – 1:1-Mathe-Nachhilfe in Leipzig</title>
+<meta name="description" content="1:1-Mathe-Nachhilfe für die Klassen 5 bis 12 in Leipzig, vor Ort oder online. Jede Stunde gezielt vorbereitet auf den aktuellen Unterrichtsstoff.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/caveat.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:title" content="Karo – 1:1-Mathe-Nachhilfe in Leipzig">
+<meta property="og:description" content="Mathe verstehen. Nicht nur bestehen. Persönliche 1:1-Nachhilfe für die Klassen 5 bis 12, vor Ort oder online.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<style>
+@font-face{font-family:"Newsreader";src:url("fonts/newsreader.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("fonts/newsreader-italic.woff2") format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("fonts/instrument-sans.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Caveat";src:url("fonts/caveat.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+:root{
+  --paper:#FAF8F3;--sheet:#FFFEFB;--ink:#152036;--muted:#5E6577;--soft:#8A8F9C;
+  --blue:#2238A0;--blue-deep:#1A2C80;--blue-soft:#EEF0F7;
+  --line:#E6E1D6;--grid:#DCE2EC;--rand:#E9B8B8;--marker:rgba(246,226,70,.85);
+  --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --shadow:0 1px 2px rgba(21,32,54,.05),0 14px 34px -10px rgba(21,32,54,.18),0 44px 80px -34px rgba(21,32,54,.22);
+  --sq:24px;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .1 0 0 0 0 .18 0 0 0 .028 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4.5vw,48px)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;line-height:1.05;margin:0;font-optical-sizing:auto}
+h2{font-size:clamp(2.3rem,4.4vw,3.6rem)}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--blue)}
+.lede{font-family:var(--serif);font-size:clamp(1.15rem,1.6vw,1.3rem);line-height:1.5;color:var(--muted);max-width:34em}
+.label{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--muted);margin-bottom:22px}
+.label b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.05rem;color:var(--blue)}
+.label::after{content:"";height:1px;width:48px;background:var(--line)}
+section{padding:clamp(88px,11vw,150px) 0}
+
+/* Header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+header.top.scrolled{background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.3) blur(12px);-webkit-backdrop-filter:saturate(1.3) blur(12px);border-bottom-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.word{position:relative;font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.9rem;letter-spacing:-.01em;line-height:1;padding-bottom:6px}
+.word svg{position:absolute;left:0;bottom:-3px;width:100%;height:9px;overflow:visible}
+.word path{fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round}
+.brand small{font-size:.78rem;line-height:1.25;color:var(--muted);padding-left:14px;border-left:1px solid var(--line)}
+nav.links{display:flex;align-items:center;gap:30px;font-size:.95rem}
+nav.links a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav.links a:not(.btn):hover{color:var(--ink)}
+@media (max-width:860px){nav.links a:not(.btn){display:none}}
+@media (max-width:420px){.brand small{display:none}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 1rem var(--sans);padding:14px 26px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;cursor:pointer;transition:transform .2s ease,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px);background:var(--blue);border-color:var(--blue)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:color-mix(in srgb,var(--ink) 30%,transparent)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.small{padding:10px 20px;font-size:.93rem}
+nav.links .btn{color:var(--paper)}
+
+/* Hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(64px,8vw,110px)}
+.hero .wrap{display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:12px;margin:0 0 30px;padding:5px 16px 5px 5px;border:1px solid var(--line);border-radius:999px;background:var(--sheet);font-size:.93rem;color:var(--muted)}
+.kicker .one{display:inline-grid;place-items:center;height:32px;padding:0 13px;border-radius:999px;background:var(--blue);color:#fff;font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.1rem}
+.hero h1{font-size:clamp(3rem,6.6vw,5.7rem);line-height:.96;letter-spacing:-.025em}
+.hero h1 em{display:block;margin-top:.04em}
+.hero .lede{margin-top:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:52px 0 0;padding:22px 0 0;list-style:none;border-top:1px solid var(--line);max-width:32rem}
+.facts li{display:flex;flex-direction:column;gap:2px;padding:0 18px;border-left:1px solid var(--line)}
+.facts li:first-child{padding-left:0;border-left:0}
+.facts strong{font-family:var(--serif);font-weight:500;font-size:1.35rem;letter-spacing:-.01em;line-height:1.2}
+.facts span{font-size:.9rem;color:var(--muted)}
+@media (max-width:420px){.facts li{padding:0 10px}.facts strong{font-size:1.08rem}}
+
+/* Heftseite */
+.sheet-wrap{position:relative}
+.sheet{position:relative;background-color:var(--sheet);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:var(--sq) var(--sq);background-position:-1px -1px;border-radius:3px;box-shadow:var(--shadow);transform:rotate(-1.6deg);
+  padding:calc(var(--sq)*2) calc(var(--sq)*1.5) calc(var(--sq)*2) calc(var(--sq)*3.5);min-height:calc(var(--sq)*17)}
+.sheet::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--sq)*2.5);width:2px;background:var(--rand)}
+.sheet .meta{position:absolute;top:calc(var(--sq)*.35);right:calc(var(--sq)*1.2);font-family:var(--hand);font-size:22px;color:var(--muted)}
+.ln{display:flex;justify-content:space-between;align-items:flex-end;height:calc(var(--sq)*2);font-family:var(--hand);font-weight:500;color:var(--blue);font-size:33px;line-height:1;padding-bottom:4px;white-space:nowrap}
+.ln .op{color:var(--muted);font-size:27px}
+.sheet.js .ch{opacity:0;filter:blur(1.5px);transition:opacity .16s ease,filter .22s ease}
+.sheet.js .ch.on{opacity:1;filter:none}
+.res{position:relative;display:inline-block;padding:0 6px}
+.uline{position:absolute;left:-2px;bottom:-13px;width:calc(100% + 8px);height:14px;overflow:visible}
+.uline path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.sheet.js .uline path{stroke-dashoffset:1;transition:stroke-dashoffset .35s cubic-bezier(.4,0,.3,1)}
+.sheet.js.marked .uline path{stroke-dashoffset:0}
+.sheet.js.marked .uline path+path{transition-delay:.3s}
+.note{position:absolute;left:calc(var(--sq)*7.6);top:calc(var(--sq)*10.2);font-family:var(--hand);font-size:23px;color:var(--muted);transform:rotate(-2deg);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.note svg{width:54px;height:24px;flex:none}
+.note path{stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round}
+.sheet.js .note{opacity:0;transition:opacity .4s ease}
+.sheet.js.noted .note{opacity:1}
+.sheet.js .note path{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset .7s ease .1s}
+.sheet.js.noted .note path{stroke-dashoffset:0}
+.pen{position:absolute;left:0;top:0;width:34px;height:34px;pointer-events:none;opacity:0;transition:transform .09s linear,opacity .35s ease;z-index:2}
+.pen.on{opacity:1}
+.pen svg{width:100%;height:100%;overflow:visible}
+.replay{position:absolute;left:calc(var(--sq)*3.5);bottom:calc(var(--sq)*.5);font:500 .88rem var(--sans);color:var(--muted);background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--grid)}
+.replay:hover{color:var(--blue)}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr}.sheet-wrap{max-width:520px}}
+@media (max-width:480px){:root{--sq:20px}.sheet{padding-right:calc(var(--sq)*1)}.ln{font-size:27px}.ln .op{font-size:22px}.note{font-size:19px}}
+
+/* Themenband */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--sheet)}
+.track{display:flex;width:max-content;animation:tick 70s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.track span{display:flex;align-items:center;gap:34px;padding-right:34px;font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2vw,1.6rem);color:var(--muted);white-space:nowrap}
+.track span::after{content:"";width:9px;height:9px;border:1.5px solid var(--blue);border-radius:1px;transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* Haltung */
+.statement{padding:clamp(96px,12vw,170px) 0}
+.neg{display:flex;flex-wrap:wrap;gap:.2em .6em;font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.2;color:var(--soft);letter-spacing:-.01em}
+.x{position:relative;white-space:nowrap}
+.x::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(1) rotate(-1.5deg);transform-origin:left;transition:transform .55s cubic-bezier(.5,0,.3,1)}
+.js-anim .statement:not(.in) .x::after{transform:scaleX(0) rotate(-1.5deg)}
+.statement .x:nth-child(2)::after{transition-delay:.35s}.statement .x:nth-child(3)::after{transition-delay:.7s}
+.pos{margin-top:clamp(26px,3vw,40px);font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5.2vw,4.4rem);line-height:1.04;letter-spacing:-.022em;max-width:15em}
+.pos em{font-style:italic;font-weight:400;color:var(--blue)}
+
+/* Kennen Sie das */
+.pain{padding-top:0}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:44px}
+.quote{padding-top:24px;border-top:1px solid var(--ink)}
+.quote .n{font-family:var(--serif);font-style:italic;color:var(--blue);font-size:1rem}
+.quote p{margin-top:14px;font-family:var(--serif);font-size:clamp(1.3rem,1.9vw,1.55rem);line-height:1.35;letter-spacing:-.005em}
+.answer{margin-top:clamp(48px,6vw,72px);display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+.answer p{font-family:var(--hand);font-size:clamp(1.8rem,3vw,2.3rem);color:var(--blue);line-height:1}
+@media (max-width:820px){.pain-grid{grid-template-columns:1fr}}
+
+/* Methode */
+.method{background:var(--blue-soft)}
+.method-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:start}
+.method-head{position:sticky;top:130px}
+.method-head .lede{margin-top:24px}
+.method-head .btn{margin-top:34px}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:88px 1fr;gap:10px 20px;padding:34px 0;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.steps li:last-child{border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.steps .num{font-family:var(--serif);font-weight:400;font-size:3.2rem;line-height:.9;color:var(--blue);letter-spacing:-.02em}
+.steps h3{font-size:1.6rem;margin-bottom:8px}
+.steps p{color:var(--muted);max-width:30em}
+.steps .tag{display:inline-block;margin-top:12px;font-family:var(--hand);font-size:1.3rem;color:var(--blue);line-height:1}
+@media (max-width:900px){.method-grid{grid-template-columns:1fr}.method-head{position:static}.steps li{grid-template-columns:64px 1fr}.steps .num{font-size:2.5rem}}
+
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(64px,8vw,104px)}
+.tile{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--line);border-radius:16px;padding:30px 28px 32px;transition:transform .3s ease,box-shadow .3s ease}
+.tile:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(21,32,54,.35)}
+.tile h3{font-size:1.4rem;margin:22px 0 8px}
+.tile p{color:var(--muted);font-size:.97rem}
+.ic{width:42px;height:42px;display:block}
+.ic path{fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1s cubic-bezier(.5,0,.3,1)}
+.js-anim .tile:not(.in) .ic path{stroke-dashoffset:1}
+.ic path:nth-child(2){transition-delay:.2s}.ic path:nth-child(3){transition-delay:.45s}
+.switch{align-self:flex-start;height:42px;display:inline-flex;align-items:center;padding:4px;border-radius:999px;background:var(--blue-soft);gap:2px}
+.switch button{white-space:nowrap;font:500 .92rem var(--sans);color:var(--muted);background:none;border:0;border-radius:999px;padding:7px 15px;cursor:pointer;transition:background .25s,color .25s}
+.switch button[aria-pressed="true"]{background:var(--blue);color:#fff}
+#mode-text{transition:opacity .2s}
+@media (max-width:1000px){.tiles{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.tiles{grid-template-columns:1fr}}
+
+/* Über mich */
+.about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,7vw,110px);align-items:center}
+.portrait{margin:0;position:relative}
+.portrait .frame{aspect-ratio:4/5;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(1.2deg);background:var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait figcaption{position:absolute;right:-8px;bottom:-34px;display:flex;align-items:center;gap:8px;font-family:var(--hand);font-size:1.5rem;color:var(--muted);transform:rotate(-3deg)}
+.portrait figcaption svg{width:46px;height:30px}
+.portrait figcaption path{fill:none;stroke:var(--muted);stroke-width:1.8;stroke-linecap:round}
+.about .body{margin-top:26px;font-family:var(--serif);font-size:clamp(1.12rem,1.5vw,1.25rem);line-height:1.55;max-width:31em}
+.about .body p+p{margin-top:16px}
+.about .facts2{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;padding:0;list-style:none}
+.about .facts2 li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--sheet);font-size:.9rem;color:var(--muted)}
+.about .facts2 b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}.portrait{max-width:340px}}
+
+/* Anspruch */
+.creed{background:var(--blue);color:#fff;text-align:center;padding:clamp(96px,12vw,160px) 0}
+.creed .label{justify-content:center;color:rgba(255,255,255,.7)}
+.creed .label b{color:#fff}
+.creed .label::after,.creed .label::before{content:"";height:1px;width:48px;background:rgba(255,255,255,.3)}
+.creed blockquote{margin:0 auto;max-width:18em;font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.12;letter-spacing:-.02em}
+.creed blockquote em{font-style:italic;font-weight:400}
+.creed blockquote span{color:rgba(255,255,255,.62)}
+.creed .sign{margin-top:36px;font-family:var(--hand);font-size:2.3rem;line-height:1;color:rgba(255,255,255,.85)}
+
+/* Pakete */
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:24px 64px;align-items:end;margin-bottom:clamp(44px,6vw,68px)}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+.plans{display:grid;grid-template-columns:1fr 1fr 1.06fr;gap:18px;align-items:stretch}
+.plan{display:flex;flex-direction:column;padding:34px 30px 30px;border:1px solid var(--line);border-radius:16px;background:var(--sheet)}
+.plan h3{font-size:1.8rem}
+.plan .for{color:var(--muted);margin-top:6px;min-height:3.2em;font-size:.97rem}
+.price{display:flex;align-items:baseline;gap:8px;margin:28px 0 4px}
+.price b{font-family:var(--serif);font-weight:500;font-size:3.5rem;letter-spacing:-.02em;line-height:1}
+.price span{color:var(--muted);font-size:.95rem}
+.per{font-size:.9rem;color:var(--muted);min-height:1.5em}
+.plan ul{list-style:none;padding:0;margin:26px 0 30px;display:grid;gap:11px;flex:1;align-content:start;font-size:.97rem}
+.plan li,.premium li{display:flex;gap:12px;align-items:flex-start}
+.plan li::before,.premium li::before{content:"";flex:none;margin-top:.5em;width:11px;height:6px;border-left:1.5px solid var(--blue);border-bottom:1.5px solid var(--blue);transform:rotate(-45deg)}
+.plan .btn{width:100%}
+.plan.star{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 30px 60px -30px rgba(34,56,160,.6)}
+.plan.star .for,.plan.star .price span,.plan.star .per{color:rgba(255,255,255,.72)}
+.plan.star li::before{border-color:#fff}
+.plan.star .btn{background:#fff;color:var(--blue);border-color:#fff}
+.plan.star .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plan .tag{font-family:var(--hand);font-size:1.5rem;line-height:1.1;margin:-8px 0 12px;opacity:.92;clip-path:inset(-10% -10% -10% -10%);transition:clip-path 1.1s cubic-bezier(.5,0,.3,1) .2s}
+.js-anim .plan.star:not(.in) .tag{clip-path:inset(-10% 100% -10% -10%)}
+.premium{margin-top:18px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr) auto;gap:24px 44px;align-items:center;padding:34px;border-radius:16px;background:var(--ink);color:var(--paper)}
+.premium h3{font-size:1.8rem}
+.premium .sub{color:rgba(250,248,243,.7);margin-top:6px;font-size:.97rem}
+.premium ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:11px 24px;font-size:.97rem}
+.premium li::before{border-color:var(--marker)}
+.premium .p-side{display:grid;gap:14px;justify-items:start}
+.premium .price{margin:0}
+.premium .price span{color:rgba(250,248,243,.7)}
+.premium .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.premium .btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.slots{display:inline-flex;align-items:center;gap:8px;font-family:var(--hand);font-size:1.45rem;line-height:1;color:var(--marker);margin:0 0 10px;transform:rotate(-2deg);transform-origin:left}
+.slots::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--marker);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.addon{margin-top:18px;display:grid;grid-template-columns:auto 1fr auto;gap:18px 32px;align-items:center;padding:24px 30px;border:1px dashed color-mix(in srgb,var(--ink) 30%,transparent);border-radius:16px}
+.addon h3{font-size:1.4rem}
+.addon p{color:var(--muted);font-size:.97rem}
+.addon b{font-family:var(--serif);font-weight:500;font-size:2.1rem;white-space:nowrap}
+.fine{margin-top:26px;color:var(--muted);font-size:.93rem;max-width:46em}
+.fine strong{color:var(--ink);font-weight:600}
+@media (max-width:920px){.plans{grid-template-columns:1fr}.plan .for{min-height:0}.premium{grid-template-columns:1fr}.premium ul{grid-template-columns:1fr}.addon{grid-template-columns:1fr auto}.addon p{grid-column:1/-1;grid-row:2}}
+
+/* Ornament-Trenner */
+.orn{position:relative;border-top:1px solid var(--line)}
+.orn::before{content:"∴";position:absolute;top:0;left:50%;transform:translate(-50%,-55%);padding:0 18px;background:var(--paper);font-family:var(--serif);font-size:2rem;line-height:1;color:var(--blue)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:24px 0;font-family:var(--serif);font-weight:500;font-size:clamp(1.2rem,1.8vw,1.4rem);letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;background:linear-gradient(var(--blue),var(--blue)) center/100% 1.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/1.5px 100% no-repeat;transition:transform .3s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{font-family:var(--serif);font-size:1.12rem;line-height:1.55;color:var(--muted);padding:0 40px 26px 0}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
+
+/* Kontakt */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px)}
+.contact h2 em{color:#9FB0F5}
+.contact .lede{color:rgba(250,248,243,.7);margin-top:22px}
+.contact .label{color:rgba(250,248,243,.6)}.contact .label b{color:#9FB0F5}.contact .label::after{background:rgba(250,248,243,.2)}
+.alt{margin-top:36px;display:grid;gap:4px;color:rgba(250,248,243,.65)}
+.alt a{font-family:var(--serif);font-size:1.6rem;color:var(--paper);text-decoration:none}
+.alt a:hover{color:#9FB0F5}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:grid;gap:7px}.f.full{grid-column:1/-1}
+label{font-size:.88rem;color:rgba(250,248,243,.72)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--paper);background:rgba(250,248,243,.06);border:1px solid rgba(250,248,243,.2);border-radius:10px;padding:13px 14px;width:100%;transition:border-color .2s,background .2s}
+select option{color:#152036}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--paper);background:rgba(250,248,243,.1)}
+.send{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.contact .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.contact .btn:hover{background:#9FB0F5;border-color:#9FB0F5}
+.contact .btn.ghost{background:transparent;color:var(--paper);border-color:rgba(250,248,243,.35)}
+.contact .btn.ghost:hover{background:var(--paper);color:var(--ink)}
+.hint{grid-column:1/-1;font-size:.88rem;color:rgba(250,248,243,.6);min-height:1.3em}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+/* Footer */
+footer{padding:64px 0 48px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.foot h4{margin:0 0 12px;font-size:.85rem;font-weight:500;color:var(--muted)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--blue)}
+.foot .claim{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--muted);max-width:16em}
+.copy{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot > div:first-child{grid-column:1/-1}}
+
+/* Scroll-Einblendung */
+.js-anim .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js-anim .rv.in{opacity:1;transform:none}
+.js-anim .rv.d1{transition-delay:.1s}.js-anim .rv.d2{transition-delay:.2s}.js-anim .rv.d3{transition-delay:.3s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .sheet.js .ch{opacity:1;filter:none}.pen{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Karo – zur Startseite">
+      <span class="word">Karo<svg viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 4 C 30 2.5, 65 5, 97 3"/><path d="M8 10 C 36 8.5, 68 10.5, 94 8.5"/></svg></span>
+      <small>Mathe-Nachhilfe<br>in Leipzig</small>
+    </a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="#methode">Methode</a>
+      <a href="#ueber-mich">Über mich</a>
+      <a href="#pakete">Pakete</a>
+      <a href="#faq">Fragen</a>
+      <a class="btn small" href="#kontakt">Kennenlernen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker rv"><span class="one">1:1</span>Mathe-Nachhilfe in Leipzig</p>
+      <h1 id="h-hero" class="rv d1">Mathe verstehen. <em>Nicht nur bestehen.</em></h1>
+      <p class="lede rv d2">Persönliche Nachhilfe im 1:1-Unterricht für die Klassen 5 bis 12. Volle Aufmerksamkeit für Ihr Kind, jede Stunde gezielt vorbereitet auf den aktuellen Unterrichtsstoff.</p>
+      <div class="cta rv d3">
+        <a class="btn" href="#kontakt">Kennenlernen anfragen</a>
+        <a class="btn ghost" href="#pakete">Pakete ansehen</a>
+      </div>
+      <ul class="facts rv d3">
+        <li><strong>Klasse 5–12</strong><span>bis zum Abitur</span></li>
+        <li><strong>Vor Ort</strong><span>oder online</span></li>
+        <li><strong>Monatlich</strong><span>kündbar</span></li>
+      </ul>
+    </div>
+    <div class="sheet-wrap">
+      <div class="sheet" id="sheet" role="img" aria-label="Heftseite mit einer schrittweise gelösten Gleichung: 3 mal Klammer x minus 2 plus 5 gleich 2x plus 7. Ergebnis doppelt unterstrichen: x gleich 8.">
+        <span class="meta">Gleichungen, Kl. 8</span>
+        <div class="ln"><span>3(x − 2) + 5 = 2x + 7</span><span class="op"></span></div>
+        <div class="ln"><span>3x − 6 + 5 = 2x + 7</span><span class="op"></span></div>
+        <div class="ln"><span>3x − 1 = 2x + 7</span><span class="op">| − 2x</span></div>
+        <div class="ln"><span>x − 1 = 7</span><span class="op">| + 1</span></div>
+        <div class="ln"><span><span class="res">x = 8<svg class="uline" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 4 C 30 2, 65 5, 98 3"/><path pathLength="1" d="M5 11 C 35 9, 70 12, 96 9"/></svg></span></span><span class="op"></span></div>
+        <div class="note" aria-hidden="true"><svg viewBox="0 0 54 24"><path d="M50 16 C 36 20, 20 18, 4 10 M4 10 L 13 7 M4 10 L 10 17"/></svg>Probe: 23 = 23 ✓</div>
+        <div class="pen" id="pen" aria-hidden="true"><svg viewBox="0 0 34 34"><g transform="rotate(-38 4 30)"><path fill="#152036" d="M4 30 L1 22 L4 19 L7 22 Z"/><rect fill="#2238A0" x="0.5" y="-10" width="7" height="29" rx="2"/></g></svg></div>
+        <button class="replay" id="replay" type="button">Nochmal rechnen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track" id="track"></div>
+</div>
+
+<section class="statement" aria-label="Haltung">
+  <div class="wrap">
+    <p class="neg"><span class="x">Kein Lehrerwechsel.</span> <span class="x">Keine Stunde nach Schema F.</span> <span class="x">Keine zusammengewürfelten Gruppen.</span></p>
+    <p class="pos rv">Persönliche 1:1-Nachhilfe, <em>mit System und Liebe zum Detail.</em></p>
+  </div>
+</section>
+
+<section class="pain" aria-labelledby="h-pain">
+  <div class="wrap">
+    <p class="label rv"><b>Für Eltern</b> Kennen Sie diese Sätze?</p>
+    <h2 id="h-pain" class="rv d1">Wenn Mathe zum <em>Dauerthema</em> wird.</h2>
+    <div class="pain-grid">
+      <div class="quote rv"><span class="n">i.</span><p>„Mama, wir sind da zu sechst. Bis ich mal dran bin, ist die Stunde vorbei.“</p></div>
+      <div class="quote rv d1"><span class="n">ii.</span><p>„Papa, heute war schon wieder ein neuer Nachhilfelehrer da. Ich musste alles nochmal erklären.“</p></div>
+      <div class="quote rv d2"><span class="n">iii.</span><p>„Wir machen da nur Arbeitsblätter. Das ist gar nicht das, was wir in der Schule gerade haben.“</p></div>
+    </div>
+    <div class="answer rv">
+      <p>Genau hier setze ich an.</p>
+      <a class="btn ghost" href="#methode">Zur Methode</a>
+    </div>
+  </div>
+</section>
+
+<section class="method" id="methode" aria-labelledby="h-methode">
+  <div class="wrap">
+    <div class="method-grid">
+      <div class="method-head">
+        <p class="label rv"><b>Die Methode</b> So arbeite ich</p>
+        <h2 id="h-methode" class="rv d1">Jede Stunde auf Ihr Kind <em>zugeschnitten.</em></h2>
+        <p class="lede rv d2">Viele Nachhilfestunden beginnen mit der Frage „Was habt ihr gerade?“. Meine beginnen mit einem Plan.</p>
+        <a class="btn rv d3" href="#kontakt">Kennenlernen anfragen</a>
+      </div>
+      <ol class="steps">
+        <li class="rv"><span class="num">01</span><div><h3>Kennenlernen</h3><p>In einem unverbindlichen Gespräch klären wir Klassenstufe, aktuelle Themen und Ziele, und ob vor Ort oder online besser passt.</p></div></li>
+        <li class="rv"><span class="num">02</span><div><h3>Heftseite schicken</h3><p>Vor jeder Stunde erhalte ich per WhatsApp Fotos der aktuellen Heft- und Arbeitsblattseiten.</p></div></li>
+        <li class="rv"><span class="num">03</span><div><h3>Gezielte Vorbereitung</h3><p>Auf dieser Grundlage plane ich die Stunde: passende Übungen, typische Fehlerquellen und der nächste sinnvolle Lernschritt.</p><span class="tag">im Preis enthalten</span></div></li>
+        <li class="rv"><span class="num">04</span><div><h3>45 Minuten 1:1</h3><p>Wir arbeiten am aktuellen Stoff, bis er sicher sitzt. In regelmäßigen Gesprächen erfahren Sie, wo Ihr Kind steht.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="tiles">
+      <article class="tile rv">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M8 10.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path pathLength="1" d="M2.5 20c.6-3.8 2.8-6 5.5-6s4.9 2.2 5.5 6"/><path pathLength="1" d="M16.5 10.5a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2zM14.2 14.6c.7-.4 1.5-.6 2.3-.6 2.4 0 4.3 2 4.8 6"/></svg>
+        <h3>1:1-Unterricht</h3>
+        <p>Die ganze Stunde gehört Ihrem Kind: volle Aufmerksamkeit, eigenes Tempo, ein fester Ansprechpartner.</p>
+      </article>
+      <article class="tile rv d1">
+        <div class="switch" role="group" aria-label="Unterrichtsform">
+          <button type="button" aria-pressed="true" data-mode="vor-ort">Vor Ort</button>
+          <button type="button" aria-pressed="false" data-mode="zoom">Online</button>
+        </div>
+        <h3>Vor Ort oder online</h3>
+        <p id="mode-text">Vor Ort in Leipzig und Markkleeberg, für alle, die den persönlichen Kontakt schätzen.</p>
+      </article>
+      <article class="tile rv d2">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M3.5 5.5h11a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1H9l-3.5 3v-3h-2a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1z"/><path pathLength="1" d="M18 9h1.5a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1v3l-3-3H12"/></svg>
+        <h3>Eltern-Feedback</h3>
+        <p>In festen Abständen besprechen wir Fortschritte, Stärken und die nächsten Schritte.</p>
+      </article>
+      <article class="tile rv d3">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M4 6h16v14H4z"/><path pathLength="1" d="M4 10h16M8 3.5v4M16 3.5v4"/><path pathLength="1" d="M9 15l2 2 4-4"/></svg>
+        <h3>Monatlich kündbar</h3>
+        <p>Keine Mindestlaufzeit, keine versteckten Kosten. Sie bleiben, weil es wirkt.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="ueber-mich" aria-labelledby="h-about">
+  <div class="wrap">
+    <figure class="portrait rv">
+      <div class="frame"><img src="assets/timon.jpg" alt="Timon, Mathe-Nachhilfelehrer in Leipzig" width="720" height="900" loading="lazy" decoding="async"></div>
+      <figcaption aria-hidden="true"><svg viewBox="0 0 46 30"><path d="M42 26 C 30 26, 16 20, 6 6 M6 6 L 7 15 M6 6 L 15 8"/></svg>das bin ich</figcaption>
+    </figure>
+    <div>
+      <p class="label rv"><b>Über mich</b> Ihr Ansprechpartner</p>
+      <h2 id="h-about" class="rv d1">Hallo, ich bin <em>Timon.</em></h2>
+      <div class="body rv d2">
+        <p>Schon in der Schule war ich derjenige, an den sich Mitschüler gewandt haben, wenn es in Mathe nicht weiterging. Daraus ist mehr geworden: Seit vier Jahren bin ich durchgehend als Nachhilfelehrer tätig, mit Schwerpunkt auf den Klassen 5 bis 12.</p>
+        <p>Parallel studiere ich BWL an der HTWK Leipzig mit Schwerpunkt Finanzen. Mit Zahlen arbeite ich also nicht nur in der Nachhilfe.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="creed" aria-label="Mein Anspruch">
+  <div class="wrap">
+    <p class="label rv"><b>Mein Anspruch</b></p>
+    <blockquote class="rv d1"><em>Geduld,</em> <span>weil jedes Kind sein eigenes Tempo braucht.</span> <em>Zielstrebigkeit,</em> <span>weil jede Stunde auf ein klares Ziel hinarbeitet.</span></blockquote>
+    <p class="sign rv d2">Timon</p>
+  </div>
+</section>
+
+<section id="pakete" aria-labelledby="h-pakete">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="label rv"><b>Pakete</b> Transparent und fair</p>
+        <h2 id="h-pakete" class="rv d1">Das passende <em>Paket.</em></h2>
+      </div>
+      <p class="lede rv d2">Jede Einheit umfasst 45 Minuten 1:1-Unterricht, die individuelle Vorbereitung ist inklusive. Einführungspreise für das Schuljahr 2026/27.</p>
+    </div>
+    <div class="plans">
+      <article class="plan rv">
+        <h3>Flex</h3>
+        <p class="for">Einzelne Stunden nach Bedarf, ideal zum Kennenlernen.</p>
+        <div class="price"><b>30 €</b><span>pro Einheit</span></div>
+        <p class="per">&nbsp;</p>
+        <ul><li>1 Einheit à 45 Minuten</li><li>Individuelle Vorbereitung</li><li>Ohne Vertragsbindung</li></ul>
+        <a class="btn ghost" href="#kontakt" data-plan="Flex">Flex anfragen</a>
+      </article>
+      <article class="plan rv d1">
+        <h3>Fokus</h3>
+        <p class="for">Wöchentliche Begleitung für kontinuierliche Fortschritte.</p>
+        <div class="price"><b>105 €</b><span>pro Monat</span></div>
+        <p class="per">entspricht 26,25 € pro Einheit</p>
+        <ul><li>4 Einheiten im Monat</li><li>Fester Wochentermin</li><li>Regelmäßiges Eltern-Feedback</li><li>Monatlich kündbar</li></ul>
+        <a class="btn ghost" href="#kontakt" data-plan="Fokus">Fokus anfragen</a>
+      </article>
+      <article class="plan star rv d2">
+        <p class="tag">für schnelle Fortschritte</p>
+        <h3>Intensiv</h3>
+        <p class="for">Zwei Termine pro Woche. Mehr Routine, weniger Vergessen.</p>
+        <div class="price"><b>195 €</b><span>pro Monat</span></div>
+        <p class="per">entspricht 24,38 € pro Einheit</p>
+        <ul><li>8 Einheiten im Monat</li><li>Zwei feste Wochentermine</li><li>Regelmäßiges Eltern-Feedback</li><li>Monatlich kündbar</li></ul>
+        <a class="btn" href="#kontakt" data-plan="Intensiv">Intensiv anfragen</a>
+      </article>
+    </div>
+    <article class="premium rv">
+      <div>
+        <p class="slots" id="slots">nur noch <span id="slots-n">3</span> Plätze frei</p>
+        <h3>Premium</h3>
+        <p class="sub">Das Rundum-Paket: alles aus Intensiv, plus Unterstützung zwischen den Terminen.</p>
+      </div>
+      <ul><li>8 Einheiten im Monat</li><li>Hausaufgaben-Check per Foto</li><li>Chat-Support bei Fragen</li><li>Regelmäßiges Eltern-Feedback</li></ul>
+      <div class="p-side">
+        <div class="price"><b>245 €</b><span>pro Monat</span></div>
+        <a class="btn" href="#kontakt" data-plan="Premium">Premium anfragen</a>
+      </div>
+    </article>
+    <div class="addon rv">
+      <h3>Prüfungsblock</h3>
+      <p>90 Minuten gezielte Vorbereitung auf eine Klassenarbeit oder Klausur. Zu jedem Paket zubuchbar.</p>
+      <b>55 €</b>
+    </div>
+    <p class="fine"><strong>Bestandsschutz:</strong> Wer im Schuljahr 2026/27 einsteigt, behält seinen Preis auch im gesamten Schuljahr 2027/28, selbst wenn die Preise bis dahin steigen.</p>
+  </div>
+</section>
+
+<section id="faq" class="orn" aria-labelledby="h-faq">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="label rv"><b>Fragen</b> Kurz beantwortet</p>
+      <h2 id="h-faq" class="rv d1">Häufige <em>Fragen.</em></h2>
+    </div>
+    <div class="faq rv d2">
+      <details><summary>Wie läuft das Kennenlerngespräch ab?</summary><p class="ans">Wir sprechen über Klassenstufe, aktuelle Themen und Ziele Ihres Kindes und klären, ob der Unterricht vor Ort oder online stattfinden soll. Danach entscheiden Sie in Ruhe, ohne jede Verpflichtung.</p></details>
+      <details><summary>Wie kurzfristig kann ich kündigen?</summary><p class="ans">Fokus, Intensiv und Premium sind monatlich kündbar. Flex ist ohne Bindung, Sie buchen einzelne Einheiten nach Bedarf.</p></details>
+      <details><summary>Warum dauert eine Einheit 45 Minuten?</summary><p class="ans">So lange bleibt die Konzentration hoch, gerade in den unteren Klassen. Vor Prüfungen darf es mehr sein, dafür gibt es den 90-minütigen Prüfungsblock.</p></details>
+      <details><summary>Was ist im Premium-Paket enthalten?</summary><p class="ans">Alle Leistungen aus Intensiv. Zusätzlich kann Ihr Kind Hausaufgaben per Foto zur Durchsicht schicken und bei Fragen zwischen den Terminen per Chat nachhaken.</p></details>
+      <details><summary>Was bedeutet Bestandsschutz?</summary><p class="ans">Alle, die im Schuljahr 2026/27 starten, zahlen ihren Einstiegspreis auch im folgenden Schuljahr 2027/28 weiter, selbst wenn die Preise zwischenzeitlich angepasst werden.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div>
+      <p class="label rv"><b>Kontakt</b> Unverbindlich</p>
+      <h2 id="h-kontakt" class="rv d1">Lassen Sie uns <em>sprechen.</em></h2>
+      <p class="lede rv d2">Schildern Sie mir kurz Klassenstufe und aktuelle Herausforderungen. Ich melde mich zeitnah, und wir vereinbaren ein unverbindliches Kennenlerngespräch.</p>
+      <div class="alt rv d3">
+        <span>Lieber direkt anrufen oder schreiben?</span>
+        <a href="tel:+491628927740">0162 892 77 40</a>
+      </div>
+    </div>
+    <form id="form" novalidate class="rv d1">
+      <div class="f full"><label for="name">Ihr Name</label><input id="name" autocomplete="name" required></div>
+      <div class="f"><label for="klasse">Klassenstufe</label><select id="klasse"><option value="">Bitte wählen</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+      <div class="f"><label for="schule">Schulform</label><select id="schule"><option value="">Bitte wählen</option><option>Oberschule</option><option>Gymnasium</option><option>Andere</option></select></div>
+      <div class="f"><label for="paket">Interesse an</label><select id="paket"><option value="">Noch offen</option><option>Flex</option><option>Fokus</option><option>Intensiv</option><option>Premium</option><option>Prüfungsblock</option></select></div>
+      <div class="f"><label for="format">Format</label><select id="format"><option value="">Egal</option><option>Vor Ort</option><option>Online</option></select></div>
+      <div class="f full"><label for="start">Start gewünscht</label><select id="start"><option value="">Flexibel</option><option>So bald wie möglich</option><option>In den nächsten Wochen</option><option>Vor der nächsten Arbeit</option></select></div>
+      <div class="f full"><label for="msg">Wo liegen die aktuellen Schwierigkeiten?</label><textarea id="msg" placeholder="z. B. Gleichungen mit Klammern, nächste Arbeit in zwei Wochen"></textarea></div>
+      <div class="send">
+        <button class="btn" type="button" data-via="wa">Per WhatsApp senden</button>
+        <button class="btn ghost" type="button" data-via="mail">Per E-Mail senden</button>
+      </div>
+      <p class="hint" id="hint" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" aria-label="Karo – nach oben"><span class="word">Karo<svg viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 4 C 30 2.5, 65 5, 97 3"/><path d="M8 10 C 36 8.5, 68 10.5, 94 8.5"/></svg></span></a>
+        <p class="claim">Mathe verstehen. Nicht nur bestehen.</p>
+      </div>
+      <div><h4>Seite</h4><ul><li><a href="#methode">Methode</a></li><li><a href="#ueber-mich">Über mich</a></li><li><a href="#pakete">Pakete</a></li><li><a href="#faq">Fragen</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+491628927740">0162 892 77 40</a></li><li><a href="#kontakt">Anfrage stellen</a></li><li>Leipzig und Markkleeberg</li></ul></div>
+      <div><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Karo Mathe-Nachhilfe</span><span>Mit Liebe zum Detail in Leipzig gemacht.</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---- Hier anpassen ---- */
+const EMAIL = ["timonhaupt1996", "gmail.com"].join("@"); // wird nirgends angezeigt, nur beim Absenden genutzt
+const WHATSAPP = "491628927740";
+const PREMIUM_PLAETZE = 3; // 0 = Warteliste
+const THEMEN = ["Bruchrechnung","Terme und Gleichungen","Prozentrechnung","Lineare Funktionen","Satz des Pythagoras","Quadratische Funktionen","Trigonometrie","Exponentialfunktionen","Ableitungen","Kurvendiskussion","Integralrechnung","Vektoren","Stochastik","Abiturvorbereitung"];
+
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/* Kopfzeile */
+const hdr = document.getElementById("top");
+const onScroll = () => hdr.classList.toggle("scrolled", scrollY > 10);
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+/* Themenband */
+const track = document.getElementById("track");
+const row = THEMEN.map(t => `<span>${t}</span>`).join("");
+track.innerHTML = row + row;
+
+/* Heftseite: Buchstabe für Buchstabe */
+const sheet = document.getElementById("sheet");
+const pen = document.getElementById("pen");
+function splitChars(node){
+  [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) {
+      const frag = document.createDocumentFragment();
+      [...n.textContent].forEach(c => { const sp = document.createElement("span"); sp.className = "ch"; sp.textContent = c; frag.appendChild(sp); });
+      n.replaceWith(frag);
+    } else if (n.nodeType === 1 && n.nodeName.toLowerCase() !== "svg") splitChars(n);
+  });
+}
+const lines = [...sheet.querySelectorAll(".ln")];
+lines.forEach(splitChars);
+sheet.classList.add("js");
+let run = 0;
+function movePen(ch){
+  let x = ch.offsetWidth - 3, y = ch.offsetHeight - 34, el = ch;
+  while (el && el !== sheet) { x += el.offsetLeft; y += el.offsetTop; el = el.offsetParent; }
+  pen.style.transform = `translate(${x}px, ${y}px)`;
+}
+async function writeSheet(){
+  const id = ++run;
+  sheet.querySelectorAll(".ch").forEach(c => c.classList.remove("on"));
+  sheet.classList.remove("marked","noted");
+  if (calm) { sheet.querySelectorAll(".ch").forEach(c => c.classList.add("on")); sheet.classList.add("marked","noted"); return; }
+  movePen(sheet.querySelector(".ch"));
+  await sleep(250); pen.classList.add("on"); await sleep(350);
+  for (const ln of lines) {
+    for (const ch of ln.querySelectorAll(".ch")) {
+      if (id !== run) return;
+      movePen(ch); ch.classList.add("on");
+      const c = ch.textContent;
+      await sleep(c === " " ? 25 : /[=|]/.test(c) ? 130 : 55 + Math.random() * 55);
+    }
+    await sleep(380);
+  }
+  if (id !== run) return;
+  pen.classList.remove("on");
+  sheet.classList.add("marked"); await sleep(650);
+  if (id !== run) return;
+  sheet.classList.add("noted");
+}
+const startSheet = () => {
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); writeSheet(); } }, {threshold:.35});
+  io.observe(sheet);
+};
+(document.fonts && document.fonts.ready ? Promise.race([document.fonts.ready, sleep(1500)]) : Promise.resolve()).then(startSheet);
+document.getElementById("replay").addEventListener("click", writeSheet);
+
+/* Einblenden beim Scrollen */
+if (!calm && "IntersectionObserver" in window) {
+  document.documentElement.classList.add("js-anim");
+  const seen = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); } }), {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".rv, .statement, .tile, .plan.star").forEach(el => seen.observe(el));
+}
+
+/* Premium-Plätze */
+(() => {
+  const el = document.getElementById("slots");
+  if (PREMIUM_PLAETZE <= 0) el.textContent = "aktuell ausgebucht, Warteliste möglich";
+  else if (PREMIUM_PLAETZE === 1) el.textContent = "nur noch 1 Platz frei";
+  else document.getElementById("slots-n").textContent = PREMIUM_PLAETZE;
+})();
+
+/* Vor Ort / Online */
+const modeText = {
+  "vor-ort": "Vor Ort in Leipzig und Markkleeberg, für alle, die den persönlichen Kontakt schätzen.",
+  "zoom": "Online per Zoom, flexibel von zu Hause aus. Ein Wechsel zwischen beiden Formaten ist jederzeit möglich."
+};
+document.querySelectorAll(".switch button").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".switch button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  const t = document.getElementById("mode-text");
+  t.style.opacity = 0;
+  setTimeout(() => { t.textContent = modeText[btn.dataset.mode]; t.style.opacity = 1; }, 180);
+}));
+
+/* Paket übernehmen */
+document.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => {
+  document.getElementById("paket").value = a.dataset.plan;
+}));
+
+/* Anfrage senden */
+const hint = document.getElementById("hint");
+document.querySelectorAll("[data-via]").forEach(btn => btn.addEventListener("click", () => {
+  const v = id => document.getElementById(id).value.trim();
+  if (!v("name")) { hint.textContent = "Bitte tragen Sie Ihren Namen ein, damit ich weiß, mit wem ich spreche."; document.getElementById("name").focus(); return; }
+  const text = [
+    "Hallo Timon,", "",
+    "ich interessiere mich für Mathe-Nachhilfe.",
+    v("klasse") ? `Klasse: ${v("klasse")}` : "",
+    v("schule") ? `Schulform: ${v("schule")}` : "",
+    v("paket") ? `Interesse an: ${v("paket")}` : "",
+    v("format") ? `Format: ${v("format")}` : "",
+    v("start") ? `Start: ${v("start")}` : "",
+    v("msg") ? `\n${v("msg")}` : "", "",
+    `Viele Grüße\n${v("name")}`
+  ].filter((l,i,a) => l !== "" || a[i-1] !== "").join("\n");
+  const url = btn.dataset.via === "wa"
+    ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`
+    : `mailto:${EMAIL}?subject=${encodeURIComponent("Anfrage Mathe-Nachhilfe")}&body=${encodeURIComponent(text)}`;
+  window.open(url, "_blank", "noopener");
+  hint.textContent = btn.dataset.via === "wa" ? "WhatsApp wird geöffnet. Nachricht nur noch absenden." : "Ihr E-Mail-Programm wird geöffnet. Nachricht nur noch absenden.";
+}));
+</script>
+</body>
+</html>
