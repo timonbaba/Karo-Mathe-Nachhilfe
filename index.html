@@ -271,6 +271,21 @@ nav.links .btn{color:var(--paper)}
 @media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
 
 /* Kontakt */
+/* Terminbuchung */
+.book-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,6vw,96px);align-items:end}
+.book-head .lede{margin:0}
+.book{margin-top:48px;background:var(--sheet);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.book-gate{display:grid;justify-items:center;text-align:center;gap:14px;padding:clamp(40px,7vw,72px) 24px;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:var(--sq) var(--sq);background-position:-1px -1px}
+.book-gate .big{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,1.9rem);line-height:1.2;margin:0}
+.book-gate .big em{color:var(--blue)}
+.book-gate .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.book-gate .small{max-width:34rem;font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.book-gate .small a{color:var(--muted)}
+#cal-inline{min-height:620px;padding:8px}
+#cal-inline[hidden],.book-gate[hidden]{display:none}
+.contact .lede a{color:#B5CDBE}
+@media (max-width:860px){.book-head{grid-template-columns:1fr}}
 .contact{background:var(--ink);color:var(--paper)}
 .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px)}
 .contact h2 em{color:#B5CDBE}
@@ -329,7 +344,7 @@ footer{padding:64px 0 48px}
       <a href="#ueber-mich">Über mich</a>
       <a href="#pakete">Pakete</a>
       <a href="#faq">Fragen</a>
-      <a class="btn small" href="#kontakt">Kennenlernen</a>
+      <a class="btn small" href="#termin">Kennenlernen</a>
     </nav>
   </div>
 </header>
@@ -342,7 +357,7 @@ footer{padding:64px 0 48px}
       <h1 id="h-hero" class="rv d1">Mathe verstehen. <em>Nicht nur bestehen.</em></h1>
       <p class="lede rv d2">Persönliche Nachhilfe im 1:1-Unterricht für die Klassen 5 bis 12. Volle Aufmerksamkeit für Ihr Kind, jede Stunde gezielt vorbereitet auf den aktuellen Unterrichtsstoff.</p>
       <div class="cta rv d3">
-        <a class="btn" href="#kontakt">Kennenlernen anfragen</a>
+        <a class="btn" href="#termin">Kennenlernen buchen</a>
         <a class="btn ghost" href="#pakete">Pakete ansehen</a>
       </div>
       <p class="cta-note rv d3">Erste Probestunde (30 Min.) kostenlos</p>
@@ -402,7 +417,7 @@ footer{padding:64px 0 48px}
         <p class="label rv"><b>Die Methode</b> So arbeite ich</p>
         <h2 id="h-methode" class="rv d1">Jede Stunde auf Ihr Kind <em>zugeschnitten.</em></h2>
         <p class="lede rv d2">Viele Nachhilfestunden beginnen mit der Frage „Was habt ihr gerade?“. Meine beginnen mit einem Plan.</p>
-        <a class="btn rv d3" href="#kontakt">Kennenlernen anfragen</a>
+        <a class="btn rv d3" href="#termin">Kennenlernen buchen</a>
       </div>
       <ol class="steps">
         <li class="rv"><span class="num">01</span><div><h3>Kostenlos kennenlernen</h3><p>In einem kurzen Telefonat klären wir Klassenstufe, aktuelle Themen und Ziele. Danach folgt eine 30-minütige Probestunde mit Ihrem Kind.</p><span class="tag">ohne Verpflichtung</span></div></li>
@@ -539,12 +554,35 @@ footer{padding:64px 0 48px}
   </div>
 </section>
 
+<section class="booking" id="termin" aria-labelledby="h-termin">
+  <div class="wrap">
+    <div class="book-head">
+      <div>
+        <p class="label rv"><b>Termin</b> Kostenlos &amp; unverbindlich</p>
+        <h2 id="h-termin" class="rv d1">Kennenlernen <em>direkt buchen.</em></h2>
+      </div>
+      <p class="lede rv d2">Wählen Sie einen freien Termin für unser kostenloses Telefonat (15 Minuten). Die Probestunde mit Ihrem Kind vereinbaren wir dann gemeinsam.</p>
+    </div>
+    <div class="book rv d2">
+      <div class="book-gate" id="cal-gate">
+        <p class="big">Freie Termine <em>ansehen</em></p>
+        <div class="btns">
+          <button class="btn" type="button" id="cal-load">Kalender laden</button>
+          <a class="btn ghost" id="cal-link" target="_blank" rel="noopener">In neuem Tab öffnen</a>
+        </div>
+        <p class="small">Der Terminkalender wird von Cal.com bereitgestellt. Erst nach Klick werden Daten an Cal.com übertragen, mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      </div>
+      <div id="cal-inline" hidden></div>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="kontakt" aria-labelledby="h-kontakt">
   <div class="wrap">
     <div>
       <p class="label rv"><b>Kontakt</b> Kostenlos &amp; unverbindlich</p>
       <h2 id="h-kontakt" class="rv d1">Lassen Sie uns <em>sprechen.</em></h2>
-      <p class="lede rv d2">Schildern Sie mir kurz Klassenstufe und aktuelle Herausforderungen. Ich melde mich zeitnah für ein kurzes Telefonat, danach folgt eine kostenlose Probestunde mit Ihrem Kind.</p>
+      <p class="lede rv d2">Schildern Sie mir kurz Klassenstufe und aktuelle Herausforderungen. Ich melde mich zeitnah für ein kurzes Telefonat, danach folgt eine kostenlose Probestunde mit Ihrem Kind. Oder Sie <a href="#termin">buchen das Telefonat direkt</a>.</p>
       <div class="alt rv d3">
         <span>Lieber direkt anrufen oder schreiben?</span>
         <a href="tel:+491628927740">0162 892 77 40</a>
@@ -576,7 +614,7 @@ footer{padding:64px 0 48px}
         <p class="claim">Mathe verstehen. Nicht nur bestehen.</p>
       </div>
       <div><h4>Seite</h4><ul><li><a href="#methode">Methode</a></li><li><a href="#ueber-mich">Über mich</a></li><li><a href="#pakete">Pakete</a></li><li><a href="#faq">Fragen</a></li></ul></div>
-      <div><h4>Kontakt</h4><ul><li><a href="tel:+491628927740">0162 892 77 40</a></li><li><a href="#kontakt">Anfrage stellen</a></li><li>Leipzig und Markkleeberg</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+491628927740">0162 892 77 40</a></li><li><a href="#termin">Termin buchen</a></li><li><a href="#kontakt">Anfrage stellen</a></li><li>Leipzig und Markkleeberg</li></ul></div>
       <div><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
     </div>
     <div class="copy"><span>© 2026 Karo Mathe-Nachhilfe</span><span>Mit Liebe zum Detail in Leipzig gemacht.</span></div>
@@ -592,6 +630,18 @@ const THEMEN = ["Bruchrechnung","Terme und Gleichungen","Prozentrechnung","Linea
 
 const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/* Terminbuchung (Cal.com, lädt erst nach Klick) */
+const CAL_LINK = "timon-haupt-l6hrz9/kostenloses-kennenlernen-telefonat";
+document.getElementById("cal-link").href = "https://cal.com/" + CAL_LINK;
+document.getElementById("cal-load").addEventListener("click", () => {
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "kennenlernen", {origin: "https://app.cal.com"});
+  Cal.ns.kennenlernen("inline", {elementOrSelector: "#cal-inline", calLink: CAL_LINK, config: {layout: "month_view", theme: "light"}});
+  Cal.ns.kennenlernen("ui", {theme: "light", cssVarsPerTheme: {light: {"cal-brand": "#2E5A4C"}}, hideEventTypeDetails: false, layout: "month_view"});
+  document.getElementById("cal-gate").hidden = true;
+  document.getElementById("cal-inline").hidden = false;
+});
 
 /* Kopfzeile */
 const hdr = document.getElementById("top");
