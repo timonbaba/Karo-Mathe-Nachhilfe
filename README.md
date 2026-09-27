@@ -8,12 +8,16 @@ Statische Website, kein Build-Schritt nötig.
 - `assets/timon.jpg` – Porträt
 - `fonts/` – lokal eingebundene Schriften (Albert Sans, Caveat; SIL Open Font License, siehe OFL-*.txt)
 - `favicon.svg`
+- `FOTOS.md` – Shot-Liste für eigene Fotos
 
 ## Häufige Anpassungen (ganz unten in index.html, Abschnitt „Hier anpassen“)
 - `PREMIUM_PLAETZE` – freie Premium-Plätze (0 = Warteliste)
 - `WHATSAPP` / `EMAIL` – Kontaktziele des Formulars
-- `THEMEN` – Themen im Laufband
+- `CAL_LINK` – Cal.com-Link für die Terminbuchung
 
 ## Änderungen veröffentlichen
 Datei in GitHub bearbeiten oder neu hochladen („Add file“ → „Upload files“) und committen.
 Netlify veröffentlicht automatisch nach jedem Commit.
+
+## Frühere Version
+Der Stand vor dem Redesign liegt im Branch `backup/vor-redesign`.
