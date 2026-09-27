@@ -162,20 +162,37 @@ nav.links .btn{padding:11px 20px;font-size:.88rem;color:var(--paper)}
 .creed blockquote em{font-style:normal;color:var(--accent)}
 .creed .eyebrow{margin-bottom:34px}
 
-/* Preise */
-.prices{margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--ink)}
-.price-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,32px);row-gap:14px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line)}
-.price-row h3{grid-column:1/4}.price-row .desc{grid-column:4/9;max-width:30em}.price-row .amount{grid-column:9/11}.price-row .link{grid-column:11/13}
-.price-row h3{font-size:1.55rem;font-weight:300;letter-spacing:-.025em}
-.price-row .tag{display:block;margin-top:6px;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.price-row .desc{color:var(--muted);font-size:.95rem;line-height:1.6}
-.price-row .desc small{display:block;margin-top:6px;font-size:.85rem;color:var(--soft)}
-.amount{font-size:1.9rem;font-weight:300;letter-spacing:-.03em;white-space:nowrap}
-.amount span{display:block;font-size:.82rem;letter-spacing:0;color:var(--muted);font-weight:400}
-.price-row .link{justify-self:end;white-space:nowrap}
-.fine{margin-top:28px;font-size:.88rem;color:var(--muted);max-width:44em}
+/* Pakete */
+.pricing{background:var(--sand)}
+.plans{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.plan{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,2.4vw,36px)}
+.plan .top{display:flex;flex-direction:column-reverse;align-items:flex-start;gap:8px}
+.plan h3{font-size:1.5rem;font-weight:400;letter-spacing:-.02em}
+.plan .flag{display:block;height:1.3em;line-height:1.3em;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.plan .for{margin-top:10px;color:var(--muted);font-size:.93rem;line-height:1.55;min-height:3.1em}
+.plan .amount{margin-top:36px;font-size:clamp(2.8rem,4vw,3.6rem);font-weight:300;letter-spacing:-.045em;line-height:1}
+.plan .amount small{font-size:.95rem;letter-spacing:0;font-weight:400;color:var(--muted);margin-left:6px}
+.plan .per{margin-top:12px;font-size:.84rem;color:var(--muted)}
+.plan ul{list-style:none;padding:0;margin:28px 0 32px;border-top:1px solid var(--line)}
+.plan li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.plan .btn{margin-top:auto;width:100%}
+.plan.star{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.plan.star .for,.plan.star .amount small{color:rgba(246,240,230,.7)}
+.plan.star .per{color:rgba(246,240,230,.6)}
+.plan.star .flag{color:var(--accent-light)}
+.plan.star ul,.plan.star li{border-color:rgba(246,240,230,.16)}
+.plan.star .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.plan.star .btn:hover{background:var(--accent-light);border-color:var(--accent-light)}
+.extras{margin-top:clamp(12px,1.4vw,20px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px)}
+.extra{display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid color-mix(in srgb,var(--ink) 14%,transparent);border-radius:4px;padding:24px clamp(22px,2.4vw,32px)}
+.extra h3{font-size:1.15rem;font-weight:400}
+.extra p{margin-top:4px;color:var(--muted);font-size:.9rem;line-height:1.5}
+.extra .amount{font-size:2rem;font-weight:300;letter-spacing:-.03em;white-space:nowrap}
+.fine{margin-top:28px;font-size:.88rem;color:var(--muted);max-width:52em}
 .fine b{font-weight:500;color:var(--ink)}
-@media (max-width:900px){.price-row h3{grid-column:1/8}.price-row .amount{grid-column:8/13;justify-self:end;text-align:right}.price-row .desc{grid-column:1/-1;grid-row:2}.price-row .link{grid-column:1/-1;justify-self:start;margin-top:6px}}
+@media (max-width:1100px){.plans{grid-template-columns:1fr 1fr}}
+@media (max-width:1100px){.plan .for{min-height:3.1em}}
+@media (max-width:640px){.plans,.extras{grid-template-columns:1fr}.plan .for{min-height:0}}
 
 /* FAQ */
 .faq details{border-bottom:1px solid var(--line)}
@@ -258,7 +275,7 @@ footer{padding:72px 0 40px;font-size:.9rem}
       <a href="#ansatz">Ansatz</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#ueber-mich">Über mich</a>
-      <a href="#preise">Preise</a>
+      <a href="#preise">Pakete</a>
       <a href="#fragen">Fragen</a>
       <a class="btn" href="#termin">Kennenlernen</a>
     </nav>
@@ -271,11 +288,11 @@ footer{padding:72px 0 40px;font-size:.9rem}
     <div class="row">
       <div class="hero-copy">
         <span class="eyebrow rv">Mathe-Nachhilfe · Leipzig &amp; online</span>
-        <h1 id="h-hero" class="rv d1">Mathe,<br>die sitzt.</h1>
-        <p class="lead rv d2">Persönliche 1:1-Nachhilfe für die Klassen 5 bis 12. Jede Stunde ist auf den Stoff vorbereitet, den Ihr Kind gerade im Unterricht hat.</p>
+        <h1 id="h-hero" class="rv d1">Raum zum<br>Wachsen.</h1>
+        <p class="lead rv d2">Persönliche 1:1-Mathe-Nachhilfe für die Klassen 5 bis 12. In einer Lernumgebung, die Entwicklung fördert, und mit jeder Stunde vorbereitet auf den aktuellen Unterrichtsstoff.</p>
         <div class="cta rv d3">
           <a class="btn" href="#termin">Kostenlos kennenlernen</a>
-          <a class="link" href="#preise">Preise ansehen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
+          <a class="link" href="#preise">Pakete ansehen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
         </div>
       </div>
       <figure class="visual rv d2">
@@ -303,7 +320,7 @@ footer{padding:72px 0 40px;font-size:.9rem}
 
 <section class="intro" aria-label="Einleitung">
   <div class="wrap">
-    <p class="rv">Stift und Blatt ist Mathe-Nachhilfe im Eins-zu-eins. <span class="muted">Ich bereite jede Stunde anhand der aktuellen Hefterseiten vor, erkläre in Ruhe und bleibe an einem Thema, bis es sitzt.</span></p>
+    <p class="rv">Unser Ziel ist eine Umgebung, in der sich Ihr Kind entwickeln kann. <span class="muted">Mit Zeit, Geduld und klarer Struktur, eins zu eins und jede Stunde vorbereitet auf das, was gerade im Unterricht dran ist.</span></p>
   </div>
 </section>
 
@@ -373,48 +390,54 @@ footer{padding:72px 0 40px;font-size:.9rem}
   </div>
 </section>
 
-<section id="preise" aria-labelledby="h-preise">
+<section class="pricing" id="preise" aria-labelledby="h-preise">
   <div class="wrap">
     <div class="row">
-      <div class="side rule"><span class="eyebrow">Preise</span></div>
+      <div class="side rule"><span class="eyebrow">Pakete</span></div>
       <div class="main rule">
-        <h2 id="h-preise" class="rv">Klar und fair.</h2>
-        <p class="lead rv d1 gap-t">Jede Einheit dauert 45 Minuten, die individuelle Vorbereitung ist inklusive. Einführungspreise für das Schuljahr 2026/27.</p>
+        <h2 id="h-preise" class="rv">Das passende Paket.</h2>
+        <p class="lead rv d1 gap-t">Jede Einheit dauert 45 Minuten, die individuelle Vorbereitung ist immer inklusive. Einführungspreise für das Schuljahr 2026/27.</p>
       </div>
     </div>
-    <div class="prices rv">
-      <div class="price-row">
-        <h3>Flex</h3>
-        <p class="desc">Einzelne Stunden nach Bedarf, ohne Vertragsbindung.</p>
-        <p class="amount">30 €<span>pro Einheit</span></p>
-        <a class="link" href="#kontakt" data-plan="Flex">Anfragen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
-      </div>
-      <div class="price-row">
-        <h3>Fokus</h3>
-        <p class="desc">Ein fester Termin pro Woche, 4 Einheiten im Monat, regelmäßiges Eltern-Feedback.<small>entspricht 26,25 € pro Einheit</small></p>
-        <p class="amount">105 €<span>pro Monat</span></p>
-        <a class="link" href="#kontakt" data-plan="Fokus">Anfragen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
-      </div>
-      <div class="price-row">
-        <h3>Intensiv<span class="tag">Empfehlung</span></h3>
-        <p class="desc">Zwei feste Termine pro Woche, 8 Einheiten im Monat, regelmäßiges Eltern-Feedback. Mehr Routine, weniger Vergessen.<small>entspricht 24,38 € pro Einheit</small></p>
-        <p class="amount">195 €<span>pro Monat</span></p>
-        <a class="link" href="#kontakt" data-plan="Intensiv">Anfragen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
-      </div>
-      <div class="price-row">
-        <h3>Premium<span class="tag" id="slots">Noch 3 Plätze frei</span></h3>
-        <p class="desc">Alles aus Intensiv, dazu Hausaufgaben-Check per Foto und Fragen per Chat zwischen den Terminen.</p>
-        <p class="amount">245 €<span>pro Monat</span></p>
-        <a class="link" href="#kontakt" data-plan="Premium">Anfragen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
-      </div>
-      <div class="price-row">
-        <h3>Prüfungsblock</h3>
-        <p class="desc">90 Minuten gezielte Vorbereitung auf eine Klassenarbeit oder Klausur. Zu jedem Paket zubuchbar.</p>
-        <p class="amount">55 €<span>pro Block</span></p>
-        <a class="link" href="#kontakt" data-plan="Prüfungsblock">Anfragen <svg class="arrow" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 5h13M9 1l4 4-4 4"/></svg></a>
-      </div>
+    <div class="plans">
+      <article class="plan rv">
+        <div class="top"><h3>Flex</h3><span class="flag"></span></div>
+        <p class="for">Einzelne Stunden nach Bedarf.</p>
+        <p class="amount">30 €</p>
+        <p class="per">pro Einheit</p>
+        <ul><li>1 Einheit à 45 Minuten</li><li>Individuelle Vorbereitung</li><li>Ohne Vertragsbindung</li></ul>
+        <a class="btn line" href="#kontakt" data-plan="Flex">Flex anfragen</a>
+      </article>
+      <article class="plan rv d1">
+        <div class="top"><h3>Fokus</h3><span class="flag"></span></div>
+        <p class="for">Wöchentliche Begleitung mit festem Termin.</p>
+        <p class="amount">105 €</p>
+        <p class="per">pro Monat · 26,25 € pro Einheit</p>
+        <ul><li>4 Einheiten im Monat</li><li>Fester Wochentermin</li><li>Regelmäßiges Eltern-Feedback</li><li>Monatlich kündbar</li></ul>
+        <a class="btn line" href="#kontakt" data-plan="Fokus">Fokus anfragen</a>
+      </article>
+      <article class="plan star rv d2">
+        <div class="top"><h3>Intensiv</h3><span class="flag">Empfehlung</span></div>
+        <p class="for">Zwei Termine pro Woche für mehr Routine.</p>
+        <p class="amount">195 €</p>
+        <p class="per">pro Monat · 24,38 € pro Einheit</p>
+        <ul><li>8 Einheiten im Monat</li><li>Zwei feste Wochentermine</li><li>Regelmäßiges Eltern-Feedback</li><li>Monatlich kündbar</li></ul>
+        <a class="btn" href="#kontakt" data-plan="Intensiv">Intensiv anfragen</a>
+      </article>
+      <article class="plan rv d3">
+        <div class="top"><h3>Premium</h3><span class="flag" id="slots">Noch 3 Plätze</span></div>
+        <p class="for">Intensiv plus Begleitung zwischen den Terminen.</p>
+        <p class="amount">245 €</p>
+        <p class="per">pro Monat, inkl. Begleitung</p>
+        <ul><li>8 Einheiten im Monat</li><li>Hausaufgaben-Check per Foto</li><li>Fragen per Chat</li><li>Regelmäßiges Eltern-Feedback</li></ul>
+        <a class="btn line" href="#kontakt" data-plan="Premium">Premium anfragen</a>
+      </article>
     </div>
-    <p class="fine rv">Fokus, Intensiv und Premium sind monatlich kündbar. <b>Bestandsschutz:</b> Wer im Schuljahr 2026/27 einsteigt, behält seinen Preis auch im Schuljahr 2027/28.</p>
+    <div class="extras rv">
+      <div class="extra"><div><h3>Kennenlernen</h3><p>Telefonat und 30 Minuten Probestunde</p></div><p class="amount">0 €</p></div>
+      <div class="extra"><div><h3>Prüfungsblock</h3><p>90 Minuten vor Klassenarbeit oder Klausur, zu jedem Paket zubuchbar</p></div><p class="amount">55 €</p></div>
+    </div>
+    <p class="fine rv"><b>Bestandsschutz:</b> Wer im Schuljahr 2026/27 einsteigt, behält seinen Preis auch im Schuljahr 2027/28.</p>
   </div>
 </section>
 
@@ -498,7 +521,7 @@ footer{padding:72px 0 40px;font-size:.9rem}
         <a class="brand" href="#top" aria-label="Stift und Blatt – nach oben"><span class="word" aria-hidden="true">st<svg class="i-stift" viewBox="0 0 12 76"><rect class="dot" x="1" y="0" width="10" height="10" rx="5"/><path class="body" d="M1 17H11V55L6 74L1 55Z"/><path class="wood" d="M1 55L6 74L11 55Z"/><path class="lead-tip" d="M4.1 66.8L6 74L7.9 66.8Z"/></svg>ft und blatt</span></a>
         <p>Mathe-Nachhilfe in Leipzig und online</p>
       </div>
-      <div class="col"><h4>Seite</h4><ul><li><a href="#ansatz">Ansatz</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#ueber-mich">Über mich</a></li><li><a href="#preise">Preise</a></li></ul></div>
+      <div class="col"><h4>Seite</h4><ul><li><a href="#ansatz">Ansatz</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#ueber-mich">Über mich</a></li><li><a href="#preise">Pakete</a></li></ul></div>
       <div class="col"><h4>Kontakt</h4><ul><li><a href="tel:+491628927740">0162 892 77 40</a></li><li><a href="#termin">Termin buchen</a></li><li><a href="#kontakt">Nachricht</a></li></ul></div>
       <div class="col"><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
     </div>
@@ -584,7 +607,7 @@ if (!calm && "IntersectionObserver" in window) {
 /* Premium-Plätze */
 (() => {
   const el = document.getElementById("slots");
-  el.textContent = PREMIUM_PLAETZE <= 0 ? "Warteliste" : PREMIUM_PLAETZE === 1 ? "Noch 1 Platz frei" : `Noch ${PREMIUM_PLAETZE} Plätze frei`;
+  el.textContent = PREMIUM_PLAETZE <= 0 ? "Warteliste" : PREMIUM_PLAETZE === 1 ? "Noch 1 Platz" : `Noch ${PREMIUM_PLAETZE} Plätze`;
 })();
 
 /* Paket übernehmen */
