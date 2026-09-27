@@ -17,7 +17,7 @@ Statische Website, kein Build-Schritt nötig.
 
 ## Änderungen veröffentlichen
 Datei in GitHub bearbeiten oder neu hochladen („Add file“ → „Upload files“) und committen.
-Netlify veröffentlicht automatisch nach jedem Commit.
+Cloudflare (Workers) veröffentlicht automatisch nach jedem Commit auf `main`.
 
 ## Frühere Version
 Der Stand vor dem Redesign liegt im Branch `backup/vor-redesign`.
