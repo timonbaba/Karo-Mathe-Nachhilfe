@@ -6,7 +6,7 @@ Statische Website, kein Build-Schritt nötig.
 - `index.html` – die Seite
 - `impressum.html`, `datenschutz.html` – Rechtliches (gelb markierte Stellen vor Livegang ergänzen)
 - `assets/timon.jpg` – Porträt
-- `fonts/` – lokal eingebundene Schriften (Newsreader, Instrument Sans, Caveat; SIL Open Font License, siehe OFL-*.txt)
+- `fonts/` – lokal eingebundene Schriften (Fraunces, Albert Sans, Caveat; SIL Open Font License, siehe OFL-*.txt)
 - `favicon.svg`
 
 ## Häufige Anpassungen (ganz unten in index.html, Abschnitt „Hier anpassen“)
