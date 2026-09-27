@@ -136,14 +136,15 @@ nav.links .btn{color:var(--paper)}
 @keyframes tick{to{transform:translateX(-50%)}}
 
 /* Haltung */
-.statement{padding:clamp(96px,12vw,170px) 0}
-.neg{display:flex;flex-wrap:wrap;gap:.2em .6em;font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.2;color:var(--soft);letter-spacing:-.01em}
-.x{position:relative;white-space:nowrap}
-.x::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(1) rotate(-1.5deg);transform-origin:left;transition:transform .55s cubic-bezier(.5,0,.3,1)}
-.js-anim .statement:not(.in) .x::after{transform:scaleX(0) rotate(-1.5deg)}
-.statement .x:nth-child(2)::after{transition-delay:.35s}.statement .x:nth-child(3)::after{transition-delay:.7s}
-.pos{margin-top:clamp(26px,3vw,40px);font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,5.2vw,4.4rem);line-height:1.04;letter-spacing:-.022em;max-width:15em}
-.pos em{font-weight:300;color:var(--blue)}
+.haltung{padding:clamp(96px,12vw,170px) 0}
+.haltung-head{max-width:40rem}
+.haltung-head .lede{margin-top:22px}
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(48px,6vw,80px)}
+.value{padding-top:24px;border-top:1px solid var(--line)}
+.value .n{display:block;font-size:.85rem;font-weight:500;letter-spacing:.08em;color:var(--blue)}
+.value h3{margin-top:18px;font-size:clamp(1.4rem,2vw,1.7rem);line-height:1.2;letter-spacing:-.02em}
+.value p{margin-top:12px;color:var(--muted);line-height:1.7}
+@media (max-width:860px){.values{grid-template-columns:1fr}}
 
 /* Kennen Sie das */
 .pain{padding-top:0}
@@ -362,7 +363,7 @@ footer{padding:64px 0 48px}
     <div>
       <p class="kicker rv"><span class="one">1:1</span>Mathe-Nachhilfe in Leipzig</p>
       <h1 id="h-hero" class="rv d1">Mathe verstehen. <em>Nicht nur bestehen.</em></h1>
-      <p class="lede rv d2">Persönliche Nachhilfe im 1:1-Unterricht für die Klassen 5 bis 12. Volle Aufmerksamkeit für Ihr Kind, jede Stunde gezielt vorbereitet auf den aktuellen Unterrichtsstoff.</p>
+      <p class="lede rv d2">Persönliche 1:1-Nachhilfe für die Klassen 5 bis 12. Mit Zeit, Ruhe und einem Plan für jede Stunde, damit Mathe wieder Freude macht.</p>
       <div class="cta rv d3">
         <a class="btn" href="#termin">Kennenlernen buchen</a>
         <a class="btn ghost" href="#pakete">Pakete ansehen</a>
@@ -394,10 +395,18 @@ footer{padding:64px 0 48px}
   <div class="track" id="track"></div>
 </div>
 
-<section class="statement" aria-label="Haltung">
+<section class="haltung" aria-labelledby="h-haltung">
   <div class="wrap">
-    <p class="neg"><span class="x">Kein Lehrerwechsel.</span> <span class="x">Keine Stunde nach Schema F.</span> <span class="x">Keine zusammengewürfelten Gruppen.</span></p>
-    <p class="pos rv">Persönliche 1:1-Nachhilfe, <em>mit System und Liebe zum Detail.</em></p>
+    <div class="haltung-head">
+      <p class="label rv"><b>Unsere Haltung</b> Wie wir lernen</p>
+      <h2 id="h-haltung" class="rv d1">Lernen, das sich <em>gut anfühlt.</em></h2>
+      <p class="lede rv d2">Gute Nachhilfe ist mehr als Aufgaben rechnen. Sie lebt von Vertrauen, Ruhe und einem Menschen, der wirklich zuhört.</p>
+    </div>
+    <div class="values">
+      <div class="value rv"><span class="n">01</span><h3>Lernen darf Spaß machen.</h3><p>Wer versteht, hat Freude daran. Und wer Freude hat, bleibt dran. Deshalb feiern wir kleine Fortschritte genauso wie die gute Note.</p></div>
+      <div class="value rv d1"><span class="n">02</span><h3>Wir nehmen uns Zeit.</h3><p>Keine Gruppen, kein Zeitdruck, kein Schema F. Jede Stunde gehört einem Kind, und Fragen sind immer willkommen.</p></div>
+      <div class="value rv d2"><span class="n">03</span><h3>Wir sind ein Team.</h3><p>Ihr Kind schickt vor jeder Stunde seine Hefterseiten. So bereiten wir gezielt vor, und es übernimmt Schritt für Schritt Verantwortung für den eigenen Lernweg.</p></div>
+    </div>
   </div>
 </section>
 
@@ -428,7 +437,7 @@ footer{padding:64px 0 48px}
       </div>
       <ol class="steps">
         <li class="rv"><span class="num">01</span><div><h3>Kostenlos kennenlernen</h3><p>In einem kurzen Telefonat klären wir Klassenstufe, aktuelle Themen und Ziele. Danach folgt eine 30-minütige Probestunde mit Ihrem Kind.</p><span class="tag">ohne Verpflichtung</span></div></li>
-        <li class="rv"><span class="num">02</span><div><h3>Heftseite schicken</h3><p>Vor jeder Stunde erhalte ich per WhatsApp Fotos der aktuellen Heft- und Arbeitsblattseiten.</p></div></li>
+        <li class="rv"><span class="num">02</span><div><h3>Hefterseiten schicken</h3><p>Vor jeder Stunde schickt Ihr Kind per WhatsApp Fotos der aktuellen Heft- und Arbeitsblattseiten. Ein kleiner Schritt mit großer Wirkung und ein Stück Eigenverantwortung.</p><span class="tag">Teamarbeit</span></div></li>
         <li class="rv"><span class="num">03</span><div><h3>Gezielte Vorbereitung</h3><p>Auf dieser Grundlage plane ich die Stunde: passende Übungen, typische Fehlerquellen und der nächste sinnvolle Lernschritt.</p><span class="tag">im Preis enthalten</span></div></li>
         <li class="rv"><span class="num">04</span><div><h3>45 Minuten 1:1</h3><p>Wir arbeiten am aktuellen Stoff, bis er sicher sitzt. In regelmäßigen Gesprächen erfahren Sie, wo Ihr Kind steht.</p></div></li>
       </ol>
@@ -474,6 +483,7 @@ footer{padding:64px 0 48px}
       <div class="body rv d2">
         <p>Schon in der Schule war ich derjenige, an den sich Mitschüler gewandt haben, wenn es in Mathe nicht weiterging. Daraus ist mehr geworden: Seit vier Jahren bin ich durchgehend als Nachhilfelehrer tätig, mit Schwerpunkt auf den Klassen 5 bis 12.</p>
         <p>Parallel studiere ich BWL an der HTWK Leipzig mit Schwerpunkt Finanzen. Mit Zahlen arbeite ich also nicht nur in der Nachhilfe.</p>
+        <p>Am wichtigsten ist mir aber, dass sich Ihr Kind bei mir wohlfühlt. Fehler sind willkommen, Fragen sowieso. Denn wer sich traut, nachzufragen, lernt am meisten.</p>
       </div>
 
     </div>
@@ -733,7 +743,7 @@ document.getElementById("replay").addEventListener("click", writeSheet);
 if (!calm && "IntersectionObserver" in window) {
   document.documentElement.classList.add("js-anim");
   const seen = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); } }), {threshold:.12, rootMargin:"0px 0px -6% 0px"});
-  document.querySelectorAll(".rv, .statement, .tile, .plan.star").forEach(el => seen.observe(el));
+  document.querySelectorAll(".rv, .tile, .plan.star").forEach(el => seen.observe(el));
 }
 
 /* Premium-Plätze */
