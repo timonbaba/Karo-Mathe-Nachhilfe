@@ -1,4 +1,4 @@
-# Karo – Mathe-Nachhilfe Website
+# Stift und Blatt – Mathe-Nachhilfe Website
 
 Statische Website, kein Build-Schritt nötig.
 
