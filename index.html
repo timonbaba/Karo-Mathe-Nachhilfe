@@ -202,6 +202,15 @@ nav.links .btn{color:var(--paper)}
 @media (max-width:860px){.about .wrap{grid-template-columns:1fr}.portrait{max-width:340px}}
 
 /* Anspruch */
+.why{background:var(--blue-soft)}
+.why .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,7vw,110px);align-items:start}
+.why h2{font-size:clamp(2rem,3.6vw,3rem)}
+.why h2 em{white-space:nowrap}
+.why .body{font-size:clamp(1.05rem,1.3vw,1.14rem);line-height:1.7;color:var(--muted);max-width:32em}
+.why .body p+p{margin-top:16px}
+.why .chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.why .chips li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--sheet);font-size:.9rem;color:var(--ink)}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}}
 .creed{background:var(--blue);color:#fff;text-align:center;padding:clamp(96px,12vw,160px) 0}
 .creed .label{justify-content:center;color:rgba(255,255,255,.7)}
 .creed .label b{color:#fff}
@@ -467,6 +476,26 @@ footer{padding:64px 0 48px}
         <p>Parallel studiere ich BWL an der HTWK Leipzig mit Schwerpunkt Finanzen. Mit Zahlen arbeite ich also nicht nur in der Nachhilfe.</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="why" aria-labelledby="h-why">
+  <div class="wrap">
+    <div>
+      <p class="label rv"><b>Der Name</b> Kurz erklärt</p>
+      <h2 id="h-why" class="rv d1">Warum <em aria-label="stift und blatt">st<svg class="i-stift" viewBox="0 0 12 76" aria-hidden="true"><rect class="dot" x="1" y="0" width="10" height="10" rx="5"/><path class="body" d="M1 17H11V55L6 74L1 55Z"/><path class="wood" d="M1 55L6 74L11 55Z"/><path class="lead" d="M4.1 66.8L6 74L7.9 66.8Z"/></svg>ft und blatt</em>?</h2>
+    </div>
+    <div class="rv d2">
+      <div class="body">
+        <p>Weil Mathe am Ende auf dem Papier verstanden wird: beim eigenen Rechnen, Schritt für Schritt. Das ist der Kern jeder Stunde.</p>
+        <p>Alles drumherum ist bewusst modern: Unterricht auch online per Zoom mit digitaler Tafel, gezielt erstellte Übungsaufgaben mithilfe von KI und Unterlagen, die digital jederzeit griffbereit sind. So bleibt mehr Zeit für das, worauf es ankommt.</p>
+      </div>
+      <ul class="chips">
+        <li>Online per Zoom</li>
+        <li>Digitale Tafel</li>
+        <li>KI-gestützte Übungen</li>
+      </ul>
     </div>
   </div>
 </section>
